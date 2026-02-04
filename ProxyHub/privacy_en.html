@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ProxyHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .update-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ProxyHub Privacy Policy</h1>
+        <p class="update-date">Last Updated: February 3, 2025</p>
+
+        <div class="highlight">
+            <strong>We are committed to protecting your privacy. All data for this extension is stored locally on your device. We do not collect, store, or transmit any personal data to our servers.</strong>
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Locally Stored Data</h3>
+        <p>ProxyHub uses the Chrome Storage API to store the following information on your local device:</p>
+        <ul>
+            <li><strong>Subscription URLs</strong>: Clash subscription URLs you add (including any authentication tokens)</li>
+            <li><strong>API Configuration</strong>: Clash API address and secret key</li>
+            <li><strong>Display Settings</strong>: Your interface preferences (such as dark mode, dual-column display, etc.)</li>
+            <li><strong>Node Favorites</strong>: Your list of favorited nodes</li>
+            <li><strong>Traffic Information</strong>: Traffic usage retrieved from subscription URLs (stored locally only)</li>
+        </ul>
+
+        <h3>1.2 Cloud Sync Data (Optional)</h3>
+        <p>If you enable Chrome sync functionality, the following data will be synchronized across your Chrome-signed-in devices:</p>
+        <ul>
+            <li>Display settings and preferences</li>
+        </ul>
+        <p><strong>Important</strong>: Sensitive information such as subscription URLs and API keys is <strong>stored locally only</strong> and will not participate in cloud sync to ensure your privacy and security.</p>
+
+        <h2>2. How We Use Your Data</h2>
+
+        <p>We use the collected information for:</p>
+        <ul>
+            <li><strong>Connect and Manage Clash</strong>: Communicate with your local Clash API to manage proxy nodes</li>
+            <li><strong>Display Traffic Information</strong>: Send HEAD requests to subscription servers to retrieve traffic usage</li>
+            <li><strong>Save Settings</strong>: Remember your preferences to provide a better user experience</li>
+            <li><strong>Node Testing</strong>: Test node latency to help you choose the fastest node</li>
+        </ul>
+
+        <h2>3. Data Sharing</h2>
+
+        <p><strong>We do not share your data with any third parties.</strong></p>
+
+        <p>Your data is only used for:</p>
+        <ul>
+            <li>Communication with your local Clash API (127.0.0.1 or localhost)</li>
+            <li>Sending requests to your subscription service provider's servers (for traffic information only)</li>
+            <li>Chrome browser sync functionality (only when enabled, and only syncs non-sensitive settings)</li>
+        </ul>
+
+        <h2>4. Data Security</h2>
+
+        <p>We take the following measures to protect your data:</p>
+        <ul>
+            <li><strong>Local Storage</strong>: All sensitive data (subscription URLs, API keys) is stored only on your local device</li>
+            <li><strong>Sensitive Data Masking</strong>: Sensitive parameters (such as tokens, keys) in subscription URLs are hidden by default in the interface</li>
+            <li><strong>HTTPS Encryption</strong>: All external requests use HTTPS encrypted transmission</li>
+            <li><strong>Data Export</strong>: Configuration export functionality is provided so you can backup your data at any time</li>
+            <li><strong>Data Clearing</strong>: A "Reset All" feature is provided so you can clear all stored data at any time</li>
+        </ul>
+
+        <h2>5. Your Rights</h2>
+
+        <p>You have complete control over your data:</p>
+        <ul>
+            <li><strong>Right to Access</strong>: You can view all stored data through the settings page</li>
+            <li><strong>Right to Modify</strong>: You can modify, add, or delete subscription URLs and settings at any time</li>
+            <li><strong>Right to Delete</strong>: You can clear all data through the "Reset All" feature</li>
+            <li><strong>Right to Export</strong>: You can export your configuration as a JSON file for backup</li>
+            <li><strong>Right to Import</strong>: You can restore your configuration from a backup file</li>
+        </ul>
+
+        <h2>6. Third-Party Services</h2>
+
+        <p>ProxyHub may interact with the following third-party services:</p>
+        <ul>
+            <li><strong>Clash API</strong>: Proxy service running on your local device (127.0.0.1)</li>
+            <li><strong>Subscription Providers</strong>: Service providers corresponding to the subscription URLs you configure</li>
+        </ul>
+        <p>These third-party services have their own privacy policies. We encourage you to review the privacy policies of these services.</p>
+
+        <h2>7. Cookies and Tracking Technologies</h2>
+
+        <p><strong>ProxyHub does not use any cookies or tracking technologies.</strong></p>
+
+        <h2>8. Children's Privacy</h2>
+
+        <p>ProxyHub is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+
+        <h2>9. Policy Changes</h2>
+
+        <p>We may update this privacy policy from time to time. Changes will be posted on this page, and the "Last Updated" date at the top of the policy will be revised. For significant changes, we will notify you through extension updates.</p>
+
+        <h2>10. Contact Us</h2>
+
+        <div class="contact-info">
+            <p>If you have any questions, comments, or suggestions about this privacy policy, please contact us:</p>
+            <ul>
+                <li>GitHub Issues: <a href="https://github.com/yourusername/proxyhub/issues" target="_blank">https://github.com/yourusername/proxyhub/issues</a></li>
+                <li>Email: [your-email@example.com]</li>
+            </ul>
+            <p>We will respond to your request as soon as possible (usually within 7 business days).</p>
+        </div>
+
+        <h2>11. Legal Basis</h2>
+
+        <p>This privacy policy complies with the following laws and regulations:</p>
+        <ul>
+            <li>General Data Protection Regulation (GDPR)</li>
+            <li>California Consumer Privacy Act (CCPA)</li>
+            <li>Chrome Web Store Privacy Policy Requirements</li>
+        </ul>
+    </div>
+</body>
+</html>

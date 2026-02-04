@@ -1,0 +1,38 @@
+# GitHub Pages 配置文件
+# Jekyll 静态站点生成器配置
+
+title: Zeno
+description: 开源项目展示
+author: Zeno
+
+# 网站基本信息
+url: "https://zenoleee.github.io"
+baseurl: "/zeno"
+
+# 语言设置
+lang: zh_CN
+
+# Markdown 设置
+markdown: kramdown
+highlighter: rouge
+
+# 插件
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# 排除的文件
+exclude:
+  - .gitignore
+  - README.md
+  - .idea/
+
+# 主题设置（可选，使用默认主题）
+theme: minima
+
+# 导航链接
+navigation:
+  - title: 首页
+    url: /
+  - title: ProxyHub
+    url: /ProxyHub/

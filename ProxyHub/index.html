@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProxyHub - 高效的代理节点管理工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header .tagline {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .header .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature {
+            padding: 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .feature:hover {
+            border-color: #667eea;
+        }
+
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .screenshot {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background 0.3s;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background: #5568d3;
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-link" target="_blank">← 返回首页</a>
+
+    <div class="header">
+        <h1>🔌 ProxyHub</h1>
+        <p class="tagline">高效的代理节点管理工具</p>
+        <div class="badges">
+            <span class="badge">Chrome 扩展</span>
+            <span class="badge">Edge 扩展</span>
+            <span class="badge">Manifest V3</span>
+            <span class="badge">开源免费</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 简介 -->
+        <div class="section">
+            <h2>💡 简介</h2>
+            <p>
+                ProxyHub 是一款专为 Clash 代理用户设计的浏览器扩展，提供强大的节点管理功能。
+                无需打开 Clash 配置页面，直接在浏览器中一键完成所有操作。
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>支持平台：</strong>Chrome、Edge、Brave 及其他 Chromium 内核浏览器<br>
+                <strong>开源协议：</strong>MIT License
+            </p>
+        </div>
+
+        <!-- 核心功能 -->
+        <div class="section">
+            <h2>✨ 核心功能</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>⚡ 一键测速</h3>
+                    <p>批量测试所有节点延迟，快速找到最快节点。支持自定义并发数，准确高效。</p>
+                </div>
+                <div class="feature">
+                    <h3>🤖 智能切换</h3>
+                    <p>可设置定期自动切换到延迟最低的节点，保持最佳连接状态。</p>
+                </div>
+                <div class="feature">
+                    <h3>⭐ 节点收藏</h3>
+                    <p>收藏常用节点，快速访问。支持自动排序，收藏节点优先显示。</p>
+                </div>
+                <div class="feature">
+                    <h3>📊 流量监控</h3>
+                    <p>实时显示订阅流量使用情况，避免超出流量限制。</p>
+                </div>
+                <div class="feature">
+                    <h3>🌍 多语言</h3>
+                    <p>支持简体中文、繁体中文、英文，方便全球用户使用。</p>
+                </div>
+                <div class="feature">
+                    <h3>🎨 深色模式</h3>
+                    <p>支持深色模式，保护眼睛，夜间使用更舒适。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 界面展示 -->
+        <div class="section">
+            <h2>🖼️ 界面展示</h2>
+            <p style="margin-bottom: 20px;">简洁直观的界面设计，让操作更加便捷</p>
+            <div class="screenshots">
+                <div class="screenshot">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 60px; color: white; text-align: center;">
+                        <h3 style="margin-bottom: 10px;">Popup 主界面</h3>
+                        <p style="opacity: 0.9;">节点列表 • 一键测速 • 快速切换</p>
+                    </div>
+                </div>
+                <div class="screenshot">
+                    <div style="background: #f5f5f5; padding: 60px; text-align: center;">
+                        <h3 style="margin-bottom: 10px; color: #667eea;">设置页面</h3>
+                        <p style="color: #666;">API 配置 • 订阅管理 • 显示设置</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下载安装 -->
+        <div class="section">
+            <h2>📥 下载安装</h2>
+            <p style="margin-bottom: 20px;">
+                通过 Chrome Web Store 或 GitHub 获取源码安装，完全免费！
+            </p>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://chrome.google.com/webstore" class="btn" target="_blank">
+                    Chrome Web Store
+                </a>
+                <a href="https://github.com/zenoleee/ProxyHub" class="btn btn-secondary" target="_blank">
+                    GitHub 源码
+                </a>
+            </div>
+        </div>
+
+        <!-- 使用教程 -->
+        <div class="section">
+            <h2>📖 快速开始</h2>
+            <ol style="line-height: 2; padding-left: 20px;">
+                <li>安装扩展到浏览器</li>
+                <li>点击扩展图标打开设置页面</li>
+                <li>配置 Clash API 地址和密钥</li>
+                <li>添加订阅链接</li>
+                <li>点击"加载订阅"刷新节点</li>
+                <li>开始使用！点击节点即可切换</li>
+            </ol>
+        </div>
+
+        <!-- 隐私政策 -->
+        <div class="section">
+            <h2>🔒 隐私与安全</h2>
+            <p style="margin-bottom: 15px;">
+                我们非常重视用户隐私。ProxyHub 仅使用最小权限，所有敏感数据仅存储在本地。
+            </p>
+            <ul style="line-height: 2; padding-left: 20px;">
+                <li>✅ 仅使用 storage 权限存储设置</li>
+                <li>✅ 订阅链接、API 密钥仅本地存储，不同步到云端</li>
+                <li>✅ 不收集任何用户数据</li>
+                <li>✅ 开源代码，可自行审查</li>
+            </ul>
+            <div style="margin-top: 20px;">
+                <a href="privacy_en.html" class="btn btn-secondary" target="_blank">查看完整隐私政策</a>
+                <a href="privacy.html" class="btn btn-secondary" target="_blank">中文隐私政策</a>
+            </div>
+        </div>
+
+        <!-- 技术栈 -->
+        <div class="section">
+            <h2>🛠️ 技术栈</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>前端</h3>
+                    <p>HTML5, CSS3, JavaScript (ES6+)</p>
+                </div>
+                <div class="feature">
+                    <h3>扩展 API</h3>
+                    <p>Chrome Extension Manifest V3</p>
+                </div>
+                <div class="feature">
+                    <h3>通信</h3>
+                    <p>RESTful API (Clash API)</p>
+                </div>
+                <div class="feature">
+                    <h3>存储</h3>
+                    <p>Chrome Storage API</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <div class="section">
+            <h2>❓ 常见问题</h2>
+            <div style="line-height: 2;">
+                <p><strong>Q: 支持哪些代理工具？</strong><br>
+                A: 目前支持使用 Clash API 的所有工具，包括 Clash for Windows、ClashX、Clash for Android 等。</p>
+
+                <p style="margin-top: 15px;"><strong>Q: 为什么有时无法获取流量信息？</strong><br>
+                A: 某些订阅服务器可能设置了 CORS 限制。这是浏览器的安全机制，不是扩展的问题。</p>
+
+                <p style="margin-top: 15px;"><strong>Q: 数据会同步到其他设备吗？</strong><br>
+                A: 显示设置（如深色模式、双列显示等）会跨设备同步。但订阅链接和 API 密钥仅在本地存储，保护隐私。</p>
+
+                <p style="margin-top: 15px;"><strong>Q: 完全免费吗？</strong><br>
+                A: 是的！ProxyHub 完全开源免费，永久免费使用。</p>
+            </div>
+        </div>
+
+        <!-- 反馈与贡献 -->
+        <div class="section">
+            <h2>💬 反馈与贡献</h2>
+            <p style="margin-bottom: 15px;">
+                如果你喜欢这个项目，欢迎给它一个 ⭐ Star！<br>
+                遇到问题或有建议，欢迎在 GitHub 提 Issue。
+            </p>
+            <div style="margin-top: 20px;">
+                <a href="https://github.com/zenoleee/ProxyHub/issues" class="btn" target="_blank">提交问题</a>
+                <a href="https://github.com/zenoleee/ProxyHub" class="btn btn-secondary" target="_blank">查看源码</a>
+            </div>
+        </div>
+
+        <!-- 赞助支持 -->
+        <div class="section">
+            <h2>☕ 赞助支持</h2>
+            <p style="margin-bottom: 20px;">
+                如果 ProxyHub 对你有帮助，欢迎请我喝杯咖啡☕️你的支持是我持续开发的动力！
+            </p>
+            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                <div style="text-align: center;">
+                    <img src="/zeno/images/sponsor/wechat.jpg" alt="微信支付" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                    <p style="margin-top: 10px; color: #667eea; font-weight: bold;">微信支付</p>
+                </div>
+                <div style="text-align: center;">
+                    <img src="/zeno/images/sponsor/alipay.jpg" alt="支付宝" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                    <p style="margin-top: 10px; color: #667eea; font-weight: bold;">支付宝</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px; text-align: center; color: #666;">
+                感谢所有赞助者的支持！🙏
+            </p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 ProxyHub. Made with ❤️ by Zeno</p>
+        <p style="margin-top: 10px;">
+            <a href="privacy_en.html" style="color: #667eea; text-decoration: none;" target="_blank">Privacy Policy</a> •
+            <a href="https://github.com/zenoleee" style="color: #667eea; text-decoration: none;" target="_blank">GitHub</a>
+        </p>
+    </div>
+</body>
+</html>

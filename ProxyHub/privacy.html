@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - ProxyHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .update-date {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ProxyHub 隐私政策</h1>
+        <p class="update-date">最后更新日期：2025年2月3日</p>
+
+        <div class="highlight">
+            <strong>我们承诺保护您的隐私。本扩展程序的所有数据都存储在您的本地设备中，我们不会收集、存储或传输任何个人数据到我们的服务器。</strong>
+        </div>
+
+        <h2>1. 我们收集的信息</h2>
+
+        <h3>1.1 本地存储的数据</h3>
+        <p>ProxyHub 使用 Chrome Storage API 在您的本地设备上存储以下信息：</p>
+        <ul>
+            <li><strong>订阅链接</strong>：您添加的 Clash 订阅 URL（包括可能的认证令牌）</li>
+            <li><strong>API 配置</strong>：Clash API 地址和密钥</li>
+            <li><strong>显示设置</strong>：您的界面偏好设置（如深色模式、双列显示等）</li>
+            <li><strong>节点收藏</strong>：您收藏的节点列表</li>
+            <li><strong>流量信息</strong>：从订阅 URL 获取的流量使用情况（仅存储在本地）</li>
+        </ul>
+
+        <h3>1.2 云同步数据（可选）</h3>
+        <p>如果您启用了 Chrome 同步功能，以下数据会在您登录的 Chrome 设备间同步：</p>
+        <ul>
+            <li>显示设置和偏好</li>
+        </ul>
+        <p><strong>重要</strong>：订阅链接、API 密钥等敏感信息<strong>仅存储在本地</strong>，不会参与云同步，确保您的隐私安全。</p>
+
+        <h2>2. 数据的使用</h2>
+
+        <p>我们使用收集的信息用于：</p>
+        <ul>
+            <li><strong>连接和管理 Clash</strong>：与您的本地 Clash API 通信，管理代理节点</li>
+            <li><strong>显示流量信息</strong>：向订阅服务器发送 HEAD 请求获取流量使用情况</li>
+            <li><strong>保存设置</strong>：记住您的偏好设置，提供更好的使用体验</li>
+            <li><strong>节点测试</strong>：测试节点延迟，帮助您选择最快的节点</li>
+        </ul>
+
+        <h2>3. 数据的共享</h2>
+
+        <p><strong>我们不会与任何第三方共享您的数据。</strong></p>
+
+        <p>您的数据仅用于以下情况：</p>
+        <ul>
+            <li>与您本地运行的 Clash API 通信（127.0.0.1 或 localhost）</li>
+            <li>向您的订阅服务商的服务器发送请求（仅用于获取流量信息）</li>
+            <li>Chrome 浏览器的同步功能（仅在您启用时，且仅同步非敏感设置）</li>
+        </ul>
+
+        <h2>4. 数据安全</h2>
+
+        <p>我们采取以下措施保护您的数据：</p>
+        <ul>
+            <li><strong>本地存储</strong>：所有敏感数据（订阅链接、API 密钥）仅存储在您的本地设备</li>
+            <li><strong>敏感数据遮蔽</strong>：在界面上默认隐藏订阅链接中的敏感参数（如 token、key）</li>
+            <li><strong>HTTPS 加密</strong>：所有外部请求都使用 HTTPS 加密传输</li>
+            <li><strong>数据导出</strong>：提供配置导出功能，您随时可以备份自己的数据</li>
+            <li><strong>数据清除</strong>：提供"彻底重置"功能，您可以随时清除所有存储的数据</li>
+        </ul>
+
+        <h2>5. 您的权利</h2>
+
+        <p>您对自己的数据拥有完全的控制权：</p>
+        <ul>
+            <li><strong>访问权</strong>：您可以通过设置页面查看所有存储的数据</li>
+            <li><strong>修改权</strong>：您可以随时修改、添加或删除订阅链接和设置</li>
+            <li><strong>删除权</strong>：您可以通过"彻底重置"功能清除所有数据</li>
+            <li><strong>导出权</strong>：您可以将配置导出为 JSON 文件进行备份</li>
+            <li><strong>导入权</strong>：您可以从备份文件恢复配置</li>
+        </ul>
+
+        <h2>6. 第三方服务</h2>
+
+        <p>ProxyHub 可能与以下第三方服务交互：</p>
+        <ul>
+            <li><strong>Clash API</strong>：运行在您本地设备（127.0.0.1）的代理服务</li>
+            <li><strong>订阅服务商</strong>：您配置的订阅链接对应的服务提供商</li>
+        </ul>
+        <p>这些第三方服务有自己的隐私政策。我们建议您查阅这些服务的隐私政策。</p>
+
+        <h2>7. Cookie 和跟踪技术</h2>
+
+        <p><strong>ProxyHub 不使用任何 Cookie 或跟踪技术。</strong></p>
+
+        <h2>8. 儿童隐私</h2>
+
+        <p>ProxyHub 不面向 13 岁以下儿童。我们不会故意收集 13 岁以下儿童的个人信息。</p>
+
+        <h2>9. 政策变更</h2>
+
+        <p>我们可能会不时更新本隐私政策。变更后的政策将在本页面发布，并在政策顶部标明最后更新日期。重大变更时，我们会通过扩展更新通知您。</p>
+
+        <h2>10. 联系我们</h2>
+
+        <div class="contact-info">
+            <p>如果您对本隐私政策有任何疑问、意见或建议，请通过以下方式联系我们：</p>
+            <ul>
+                <li>GitHub Issues：<a href="https://github.com/yourusername/proxyhub/issues" target="_blank">https://github.com/yourusername/proxyhub/issues</a></li>
+                <li>电子邮件：[您的邮箱地址]</li>
+            </ul>
+            <p>我们会在收到您的请求后尽快回复（通常在 7 个工作日内）。</p>
+        </div>
+
+        <h2>11. 法律依据</h2>
+
+        <p>本隐私政策符合以下法律法规的要求：</p>
+        <ul>
+            <li>欧盟通用数据保护条例 (GDPR)</li>
+            <li>加州消费者隐私法案 (CCPA)</li>
+            <li>Chrome Web Store 隐私政策要求</li>
+        </ul>
+    </div>
+</body>
+</html>
